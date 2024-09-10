@@ -5,9 +5,8 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Projects", href: "Projects.tsx" },
+  { name: "Projects", href: "/Projects.tsx" },
   { name: "About Me", href: "#" },
-  { name: "Marketplace", href: "#" },
   { name: "Contact", href: "#" },
 ];
 
@@ -126,40 +125,42 @@ export default function Hero() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{" "}
-              <a href="#" className="font-semibold text-indigo-600">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
+        <div className="mx-auto flex items-center lg:max-w-7xl">
+          <div className="mx-auto">
+            <img
+              src="src/assets/scott-portrait-2 copy.JPG"
+              alt=""
+              className="rounded-full h-auto w-auto"
+            />
           </div>
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Front-End Developer
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Creative Design, Powerful Code – Elevating User Interfaces with
-              React Expertise.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get started
-              </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
+          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div className="text-left">
+              <h1 className="text-4xl font-bold text-gray-900 sm:text-6xl">
+                Scott Nicolas
+              </h1>
+              <h2 className="text-2xl font-semibold">Front-End Developer</h2>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Creative Design, Powerful Code – Elevating User Interfaces with
+                React Expertise.
+              </p>
+              <div className="mt-10 flex items-center justify-left gap-x-6">
+                <a
+                  href="#"
+                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  View Projects
+                </a>
+                <a
+                  href="#"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
