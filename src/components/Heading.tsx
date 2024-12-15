@@ -1,115 +1,59 @@
 const Heading = () => {
   return (
     <>
-      <header className="pb-6 sticky lg:pb-0">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          {/* lg+ */}
-          <nav className="flex items-center justify-between h-16 lg:h-20">
-            <div className="flex-shrink-0">
-              <a
-                href="#"
-                role="button"
-                className="flex text-2xl font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-              >
-                [scott nicolas]
-              </a>
-            </div>
-
-            <button
-              type="button"
-              className="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100"
-            >
-              {/* Menu open: "hidden", Menu closed: "block" */}
-              <svg
-                className="block w-6 h-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-              [scott nicolas]
-            </button>
-
-            <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-              <a
-                href="./Projects.tsx"
-                title=""
-                className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-              >
-                Projects
-              </a>
-              <a
-                href="#"
-                title=""
-                className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                title=""
-                className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-              >
-                Contact
-              </a>
-            </div>
-          </nav>
-
-          {/* xs to lg */}
-          <nav className="pt-4 pb-6 border border-gray-200 rounded-md shadow-md lg:hidden">
-            <div className="flow-root">
-              <div className="flex flex-col px-6 -my-2 space-y-1">
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex py2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                >
-                  Home
-                </a>
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex py2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex py2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                >
-                  About
-                </a>
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex py2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                >
-                  Contact
-                </a>
+      <div className="min-h-screen relative">
+        <img
+          src="src/assets/hacker-hero.svg"
+          alt="Hero Background"
+          decoding="async"
+          data-nimg="fill"
+          className="z-0 h-full w-full left-0 top-0 right-0 bottom-0 object-cover text-transparent"
+        />
+        <header className="fixed top-0 left-0 right-0 z-50">
+          <nav className="transition-all duration-300 bg-white/80 backdrop-blur-md">
+            <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-row justify-between leading-[normal] items-center py-4">
+                <h1 className="text-xl font-black text-black">
+                  <a href="/">[scott nicolas]</a>
+                </h1>
+                <div className="flex items-center space-x-6 lg:space-x-16">
+                  <ul className="hidden md:flex items-center text-sm font-medium space-x-6 lg:space-x-16 justify-start">
+                    <li className="uppercase whitespace-nowrap">
+                      <a className="px-3 py-2 text-black" href="#about">
+                        About
+                      </a>
+                    </li>
+                    <li className="uppercase whitespace-nowrap">
+                      <a className="px-3 py-2 text-black" href="#projects">
+                        Projects
+                      </a>
+                    </li>
+                  </ul>
+                  <button
+                    className="md:hidden ml-4 text-black"
+                    aria-label="Toggle menu"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <line x1={4} x2={20} y1={12} y2={12}></line>
+                      <line x1={4} x2={20} y1={6} y2={6}></line>
+                      <line x1={4} x2={20} y1={18} y2={18}></line>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-
-            <div className="px-6 mt-6">
-              <a
-                href="#"
-                title=""
-                className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
-                role="button"
-              >
-                Get started now
-              </a>
-            </div>
           </nav>
-        </div>
-      </header>
+        </header>
+        <div className=" max-w-screen-2xl absolute top-48 md:top-auto md:bottom-0 left-0 right-0 mx-auto pb-12"></div>
+      </div>
     </>
   );
 };
